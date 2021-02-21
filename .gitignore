@@ -62,8 +62,6 @@ typings/
 
 .idea
 .DS_Store
-index.js
 *.iml
 *.tgz
 
-node_modules
