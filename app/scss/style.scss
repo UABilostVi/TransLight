@@ -1,35 +1,15 @@
 // @import "vars";
 // @import "libs";
 @import "normalize";
+@import "fonts";
+
+* {
+    box-sizing: border-box;
+}
 
 .wrapper {
     overflow: hidden;
     width: 100%;
-}
-
-#header {
-    height: 100vh;
-    background-image: url("/img/banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    .header__logo {
-        width: 140px;
-        height: 58px;
-    }
-    .header__menu ul li {
-        font-size: 14px;
-        line-height: 14px;
-        display: inline-block;
-        a {
-            color: #fff;
-            text-transform: uppercase;
-        }
-    }
-}
-
-.header-item {
-    display: inline-block;
 }
 
 ul {
@@ -41,8 +21,115 @@ ul {
     a {
         text-decoration: none;
     }
-  }
-
-.header-wrapper {
-    height: 80px;
 }
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header__holder {
+    display: flex;
+    position: relative;
+    background: rgba(0, 91, 193, 0.6);
+}
+
+.header {
+    // height: 100vh;
+    background-image: url("/img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'OpenSans';
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .header__menu {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        ul li {
+            font-size: 14px;
+            line-height: 14px;
+            display: inline-block;
+            padding: 15px;
+        }
+    }
+    .header__logo {
+        padding: 11px 40px;
+        a {
+            display: block;
+            img {
+                display: block;
+                width: 140px;
+                height: 58px;
+            }
+        }
+    }
+}
+
+.header__banner {
+    display: flex;
+    justify-content: center;
+}
+
+.header__banner-holder {
+    max-width: 635px;
+}
+
+.header__first-screen {
+    position: relative;
+    height: 100vh;
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header__banner-button {
+        display: inline-block;
+        width: 160px;
+        height: 51px;
+        text-align: center;
+        line-height: 14px;
+        border: 2px solid #fff;
+        font-size: 16px;
+        line-height: 51px;
+    }
+}
+
+.header__banner-text {
+    max-width: 445px;
+    font-family: 'OpenSans';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.header__banner-title {
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 71px;
+    margin-bottom: 40px;
+}
+
+.header__first-screen::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 444px;
+    height: 100%;
+    background: rgba(0, 91, 193, 0.6);
+}
+
+
+
